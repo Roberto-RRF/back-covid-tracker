@@ -1,1 +1,0 @@
-# back-covid-tracker

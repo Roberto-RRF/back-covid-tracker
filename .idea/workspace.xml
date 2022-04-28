@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9db391d6-2d0e-490d-9892-43b96ef21fa8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +43,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651160119659</updated>
-      <workItem from="1651160120859" duration="235000" />
+      <workItem from="1651160120859" duration="563000" />
+      <workItem from="1651166262907" duration="22000" />
+      <workItem from="1651168268638" duration="197000" />
     </task>
+    <task id="LOCAL-00001" summary="Changed to Express App">
+      <created>1651160427912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651160427912</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed to Express App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed to Express App" />
   </component>
 </project>

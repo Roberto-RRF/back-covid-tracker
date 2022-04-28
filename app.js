@@ -1,8 +1,11 @@
 
 var express = require('express');
+var cors = require('cors');
 
 
 var app = express();
+var cors = require('cors')
+app.use(cors())
 
 // view engine setup
 
@@ -89,7 +92,7 @@ const fetchData = async () => {
 
 app.get('/', function(req, res) {
     fetchData().then(data => {
-        res.send(data);
+        res.send(data["AGUASCALIENTES"]);
     })
 });
 
