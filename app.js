@@ -64,7 +64,7 @@ const fetchData = async () => {
     }, Object.create(null));
 
     //Buscamos en la base de datos la informacion de mexico pais
-    const resPais = await sql.query("SELECT covid_info.fecha, SUM(covid_info.nuevos_casos) as casos, SUM(covid_info.nuevas_muertes) as muertes FROM estado \n" +
+    const resPais = await sql.query("SELECT covid_info.fecha, SUM(covid_info.nuevos_casos) as nuevos_casos, SUM(covid_info.nuevas_muertes) as nuevas_muertes FROM estado \n" +
         "INNER JOIN covid_info\n" +
         "ON covid_info.estado_id = estado.id \n" +
         "GROUP By covid_info.fecha\n" +
@@ -72,6 +72,14 @@ const fetchData = async () => {
 
 
     DATA["MEXICO PAIS"] = resPais.recordset;
+
+    for(let key in DATA){
+      for(let i = 0; i < DATA[key].length; i++){
+        DATA[key][i].fecha = DATA[key][i].fecha.toLocaleDateString();
+      }
+    }
+
+
 
     return DATA;
 
@@ -92,7 +100,8 @@ const fetchData = async () => {
 
 app.get('/', function(req, res) {
     fetchData().then(data => {
-        res.send(data["AGUASCALIENTES"]);
+      console.log(data)
+        res.send(data);
     })
 });
 

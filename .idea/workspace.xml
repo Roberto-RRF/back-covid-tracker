@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db391d6-2d0e-490d-9892-43b96ef21fa8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="9db391d6-2d0e-490d-9892-43b96ef21fa8" name="Changes" comment="Added Cors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,8 @@
       <updated>1651160119659</updated>
       <workItem from="1651160120859" duration="563000" />
       <workItem from="1651166262907" duration="22000" />
-      <workItem from="1651168268638" duration="197000" />
+      <workItem from="1651168268638" duration="253000" />
+      <workItem from="1651171576851" duration="3020000" />
     </task>
     <task id="LOCAL-00001" summary="Changed to Express App">
       <created>1651160427912</created>
@@ -54,7 +51,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651160427912</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Cors">
+      <created>1651168509883</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651168509883</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +77,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed to Express App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed to Express App" />
+    <MESSAGE value="Added Cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Cors" />
   </component>
 </project>
