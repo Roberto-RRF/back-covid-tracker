@@ -1,4 +1,4 @@
-
+var Solver = require("3x3-equation-solver");
 var express = require('express');
 var cors = require('cors');
 
@@ -76,6 +76,7 @@ const fetchData = async () => {
     for(let key in DATA){
       for(let i = 0; i < DATA[key].length; i++){
         DATA[key][i].fecha = DATA[key][i].fecha.toLocaleDateString();
+
       }
     }
 
@@ -103,6 +104,70 @@ app.get('/', function(req, res) {
       console.log(data)
         res.send(data);
     })
+});
+
+app.get("/prediccion1", function(req, res) {
+  let date1 = req.body.date1
+  let date2 = req.body.date2
+  let estado = req.body.estado
+
+  date1 = new Date(date1);
+  date2 = new Date(date2);
+
+  //Calcular punto medio de dos fechas
+  const fecha_medio = new Date(date1.getTime() + (date2.getTime() - date1.getTime()) / 2);
+
+
+  fetchData().then(data => {
+      //Obtener ultimos 30 elementos
+      const last30 = data[estado].slice(-30);
+      let suma = 0;
+      for(let i = 0; i < last30.length; i++){
+        suma += parseInt(last30[i].nuevos_casos);
+      }
+
+      let res1 = 0;
+      for(let i = 0; i <30; i++){
+        res1 += parseInt(last30[i].nuevos_casos) * i;
+      }
+
+      let res2= 0;
+      for(let i = 0; i <30; i++){
+        res2 += parseInt(last30[i].nuevos_casos) * i*i;
+      }
+
+      let resultado = Solver([
+        [30,  435, 8555, suma ]
+        , [435,  8555,  189225, res1]
+        , [8555, 189225, 4463999 , res2]
+      ], true);
+
+      //Calcular diferencia dias
+      let fecha = new Date(fecha_medio);
+      let fechaActual = new Date();
+      let diferencia = fechaActual.getTime() - fecha.getTime();
+      let dias = Math.round(diferencia / (1000 * 60 * 60 * 24)) -1;
+
+      const y = reslulatado.result[0] + reslulatado.result[1] * dias + reslulatado.result[2] * dias * dias;
+
+      const promedio = suma / 30;
+
+      if(promedio > y){
+        //Poca posibilidad de contagio
+        res.send("Poca posibilidad de contagio");
+      }
+      if(promedio === y){
+        //Posibilidad de contagio moderada
+        res.send("Posibilidad de contagio moderadas");
+      }
+      else{
+        //Hay posibilidad de contagio
+        res.send("Hay posibilidad de contagio");
+      }
+
+
+      console.log(resultado.result)
+  })
 });
 
 app.listen(3001, function () {
